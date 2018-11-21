@@ -1,0 +1,82 @@
+{
+    "autoAdd": {
+        "status": false,
+        "message": "Terima Kasih telah add @!",
+        "reply": true
+    },
+    "autoJoin": {
+        "status": false,
+        "message": "Hello @!, thanks for invite me to this group\nSelfbot by Hello World",
+        "reply": true,
+        "ticket": false
+    },
+    "autoRead": false,
+    "autoRespond": {
+        "status": false,
+        "message": "Halo @!, terima kasih atas pesannya. Mohon maaf saya sedang off."
+    },
+    "autoRespondMention": {
+        "status": false,
+        "message": "Hello @!, thanks for mentioned me, if your message is very important please leave it on personal chat\nSelfbot by Hello World"
+    },
+    "changeGroupPicture": [],
+    "changePictureProfile": false,
+    "changeCoverPicture": false,
+    "checkContact": false,
+    "checkPost": false,
+    "checkSticker": false,
+    "defaultReplyReader": "Hello @!, come here join to chat",
+    "greet": {
+        "join": {
+            "status": false,
+            "message": "Halo Kak @!"
+        },
+        "leave": {
+            "status": false,
+            "message": "Good bye @!, see you next time"
+        }
+    },
+    "myProfile": {
+        "coverId": "2bb21eee670891bd33f5b72832d9e17b",
+        "displayName": "Fakhri",
+        "pictureStatus": "0h-O5Z6jlAcmAII1_312cNNzRmfA1_DXQocBZqUSkhLVInQTA0ZhY6AS8iLwVxEWA-YUA_VXkqL1Ek",
+        "statusMessage": "Zero DAYs"
+    },
+    "protect": {
+        "qr": false,
+        "gr": false,
+        "join": false,
+        "bl": {
+            "u7c4411831758814ee97328195f8563f5": true,
+            "u8dd647984ff5e3671a041fbfea5d0df8": true,
+            "u8ea8b4cafb9de30d3c72b0e3eb4cade0": true,
+            "u4414412aeae2cc289dd97c2497c3cde8": true,
+            "ucca61e2963e51dc1784307f2e0e716d2": true,
+            "u2c9901d43f6f9f61233b295b44a5601f": true,
+            "u4656c935e680c7bd35496f6435c7ee31": true,
+            "u1dcde83ecbc6b0fe41133ffeba8e6341": true,
+            "u35e041c1d45779f26e00cacd41a20474": true,
+            "ua2a5b566be19a077d6057f65216367b1": true,
+            "ueb3183b65533b8c5b22afb2800508986": true,
+            "u6b1095bc8c3c895a93a739036ee9b731": true,
+            "u85383a189e2b04c5ed52c0bc6e145f13": true,
+            "u9121c4cd7af775877f6d3d207bc12124": true,
+            "ub474830ee842a5f58a9699f05b7c7bdf": true,
+            "uce64e4179e4f3525ad808d1e0068eb7f": true,
+            "u91a2745cdb4a5009e963fcb85e6cbccc": true,
+            "udd389eed92ce3f73a6bf242ffbdeaaa1": true,
+            "u347cadc6f7c46cbf7ab0c7e20ce0c60f": true
+        },
+        "wl": {}
+    },
+    "mimic": {
+        "status": false,
+        "target": {}
+    },
+    "setKey": {
+        "status": true,
+        "key": "."
+    },
+    "copyright": "If you respect the author please don't remove this copyright\n\u00a9 2018 Hello World",
+    "author_lineid": "You can add the author by line id, https://line.me/ti/p/~fakhrads"
+}

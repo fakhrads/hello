@@ -1,0 +1,14 @@
+  File "helloworld.py", line 1959, in executeOp
+    line.sendMentionV2(op.param1, settings['autoAdd']['message'], [op.param1])
+  File "/root/a/linepy/talk.py", line 10, in checkLogin
+    return func(*args, **kwargs)
+  File "/root/a/linepy/talk.py", line 261, in sendMentionV2
+    self.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+  File "/root/a/linepy/talk.py", line 10, in checkLogin
+    return func(*args, **kwargs)
+  File "/root/a/linepy/talk.py", line 107, in sendMessage
+    return self.talk.sendMessage(self._messageReq[to], msg)
+  File "/usr/local/lib/python3.6/dist-packages/akad/TalkService.py", line 8145, in sendMessage
+    return self.recv_sendMessage()
+  File "/usr/local/lib/python3.6/dist-packages/akad/TalkService.py", line 8170, in recv_sendMessage
+    raise result.e

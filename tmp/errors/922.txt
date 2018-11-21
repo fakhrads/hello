@@ -1,0 +1,4 @@
+  File "helloworld.py", line 2472, in executeOp
+    path = line.downloadObjectMsg(msg_id, saveAs='tmp/cover.jpg')
+  File "/usr/local/lib/python3.6/dist-packages/livejson.py", line 49, in __getitem__
+    out = self.data[key]

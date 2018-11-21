@@ -1,0 +1,4 @@
+  File "helloworld.py", line 2438, in executeOp
+    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
+  File "helloworld.py", line 994, in executeCmd
+    line.sendText(to,"╭──「 Banlist 」\n"+mc+"╰──「 ZeroDAYs 」")

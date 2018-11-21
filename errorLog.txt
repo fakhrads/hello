@@ -1,0 +1,171 @@
+
+343 : 'changeCoverProfile'
+381 : 'changeCoverProfile'
+249 : 'changeCoverProfile'
+165 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+643 : 'changeCoverProfile'
+865 : 'changeCoverProfile'
+648 : 'changeCoverProfile'
+661 : 'changeCoverProfile'
+372 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+618 : 'changeCoverProfile'
+113 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+229 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+798 : TalkException(code=10, reason='not a member', parameterMap={})
+151 : TalkException(code=10, reason='not a member', parameterMap={})
+925 : TalkException(code=10, reason='not a member', parameterMap={})
+915 : TalkException(code=10, reason='not a member', parameterMap={})
+121 : TalkException(code=10, reason='not a member', parameterMap={})
+780 : TalkException(code=10, reason='not a member', parameterMap={})
+915 : TalkException(code=10, reason='not a member', parameterMap={})
+424 : TalkException(code=10, reason='not a member', parameterMap={})
+703 : TalkException(code=10, reason='not a member', parameterMap={})
+862 : TalkException(code=10, reason='not a member', parameterMap={})
+469 : TalkException(code=10, reason='not a member', parameterMap={})
+910 : TalkException(code=10, reason='not a member', parameterMap={})
+761 : TalkException(code=10, reason='not a member', parameterMap={})
+996 : TalkException(code=10, reason='not a member', parameterMap={})
+876 : TalkException(code=10, reason='not a member', parameterMap={})
+231 : TalkException(code=10, reason='not a member', parameterMap={})
+726 : TalkException(code=10, reason='not a member', parameterMap={})
+787 : TalkException(code=10, reason='not a member', parameterMap={})
+773 : TalkException(code=10, reason='not a member', parameterMap={})
+475 : TalkException(code=10, reason='not a member', parameterMap={})
+882 : TalkException(code=10, reason='not a member', parameterMap={})
+521 : TalkException(code=10, reason='not a member', parameterMap={})
+325 : TalkException(code=10, reason='not a member', parameterMap={})
+940 : TalkException(code=10, reason='not a member', parameterMap={})
+238 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+873 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+173 : 'changeCoverProfile'
+962 : 'changeCoverProfile'
+720 : 'changeCoverProfile'
+618 : 'changeCoverProfile'
+241 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+336 : TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+615 : 'changeCoverProfile'
+743 : 'changeCoverProfile'
+757 : 'changeCoverProfile'
+163 : name 'fakhri' is not defined
+192 : 'changeCoverProfile'
+141 : HTTPConnectionPool(host='api.ntcorp.us', port=80): Max retries exceeded with url: /joox/search?q=akad (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd797e47f98>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+429 : 'changeCoverProfile'
+537 : 'changeCoverProfile'
+320 : 'changeCoverProfile'
+364 : 'changeCoverProfile'
+144 : 'changeCoverProfile'
+926 : 'changeCoverProfile'
+549 : 'changeCoverProfile'
+640 : 'changeCoverProfile'
+950 : 'changeCoverProfile'
+545 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+552 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+938 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+503 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+866 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+637 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+818 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+460 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+279 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+367 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+208 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+159 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+969 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+559 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+150 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+458 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+675 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+992 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+428 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+327 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+138 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+718 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+998 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+836 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+367 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+674 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+978 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+243 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+716 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+383 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+302 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+937 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+848 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+218 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+351 : Expecting property name enclosed in double quotes: line 49 column 5 (char 1494)
+412 : name 'caca' is not defined
+893 : name 'assistsMid' is not defined
+725 : name 'assistsMid' is not defined
+687 : name 'assistsMid' is not defined
+969 : name 'assistsMid' is not defined
+621 : name 'assistsMid' is not defined
+970 : name 'bots' is not defined
+640 : name 'bots' is not defined
+904 : name 'bots' is not defined
+669 : 'changeCoverProfile'
+184 : 'changeCoverProfile'
+786 : 'changeCoverProfile'
+192 : TalkException(code=10, reason='You are not related to group: c90577b8b5ebcb51cebdb02e17eaeffee', parameterMap={'2': 'c90577b8b5ebcb51cebdb02e17eaeffee'})
+787 : 'changeCoverProfile'
+544 : 'changeCoverProfile'
+128 : 'changeCoverProfile'
+138 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+478 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+857 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+612 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+918 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+158 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+362 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+774 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+741 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+508 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+512 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+666 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+272 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+194 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+710 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+106 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+600 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+882 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+288 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+773 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+766 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+155 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+237 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+730 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+769 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+790 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+757 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+443 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+863 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+852 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+126 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+436 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+768 : Expecting property name enclosed in double quotes: line 48 column 9 (char 1456)
+333 : name 'protect' is not defined
+226 : local variable 'ret_' referenced before assignment
+255 : local variable 'ret_' referenced before assignment
+529 : 'bool' object is not subscriptable
+265 : TalkException(code=10, reason='not a member', parameterMap={})
+402 : 'LINE' object has no attribute 'sendText'
+360 : TalkException(code=10, reason='You are not related to group: c19e5f2a5cba04b972c77da4c2541d320', parameterMap={'2': 'c19e5f2a5cba04b972c77da4c2541d320'})
+297 : 'changeCoverProfile'
+711 : 'changeCoverProfile'
+922 : 'changeCoverProfile'
+297 : 'LINE' object has no attribute 'getRecentMessagesV2'
+419 : 'LINE' object has no attribute 'send_getRecentMessagesV2'
+605 : 'LINE' object has no attribute '_oprot'
+909 : 'LINE' object has no attribute 'getRecentMessagesV2'
+487 : 'LINE' object has no attribute 'getRecentMessagesV2'
+364 : 'LINE' object has no attribute '_oprot'
+282 : 'LINE' object has no attribute 'getRecentMessages'
+956 : TalkException(code=10, reason='You are not related to group: c4a8e503a9926ecdd3ba4a25dce622594', parameterMap={'2': 'c4a8e503a9926ecdd3ba4a25dce622594'})
+942 : name 'fakhri' is not defined
+301 : 'Callback' object has no attribute 'other'
+365 : TalkException(code=6, reason='text length over limit: 12107', parameterMap=None)
+410 : 'Callback' object has no attribute 'other'
+374 : 'Callback' object has no attribute 'other'
+570 : 'Callback' object has no attribute 'other'
+391 : list indices must be integers or slices, not str
+948 : list indices must be integers or slices, not str
+884 : 'changeCoverProfile'

@@ -1,0 +1,2 @@
+  File "helloworld.py", line 2212, in executeOp
+    if op.param2 in bots:

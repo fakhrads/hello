@@ -1,0 +1,14 @@
+╭───「 Help 」
+├≽ {key}About
+├≽ {key}Help
+├≽ {key}Me
+├≽ {key}Speed
+├≽ {key}Runtime
+├≽ {key}Restart
+├≽ {key}Author
+├≽ {key}Status
+├≽ {key}Abort
+├≽ {key}Error
+├≽ {key}Media
+├──「 About This BOT 」
+╰───「 ZeroDAYs x Hello World 」
