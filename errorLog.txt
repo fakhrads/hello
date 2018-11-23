@@ -169,3 +169,6 @@
 391 : list indices must be integers or slices, not str
 948 : list indices must be integers or slices, not str
 884 : 'changeCoverProfile'
+410 : TalkException(code=10, reason='not a member', parameterMap={})
+791 : TalkException(code=0, reason='invalid groupId', parameterMap=None)
+257 : 'changeCoverProfile'
