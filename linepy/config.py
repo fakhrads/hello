@@ -10,7 +10,7 @@ class Config(object):
 
     LINE_LOGIN_QUERY_PATH       = '/api/v4p/rs'
     LINE_AUTH_QUERY_PATH        = '/api/v4/TalkService.do'
-    LINE_JUNGEL_PANG            = 'https://game.linefriends.com/jbp-lcs-ranking/lcs/sendMessage'
+
     LINE_API_QUERY_PATH_FIR     = '/S4'
     LINE_POLL_QUERY_PATH_FIR    = '/P4'
     LINE_CALL_QUERY_PATH        = '/V4'
@@ -25,8 +25,7 @@ class Config(object):
         'LINE_TODAY': '1518712866',
         'LINE_STORE': '1376922440',
         'LINE_MUSIC': '1381425814',
-        'LINE_SERVICES': '1459630796',
-        'JUNGEL_PANG': '1526709289'
+        'LINE_SERVICES': '1459630796'
     }
 
     APP_VERSION = {

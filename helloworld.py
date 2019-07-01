@@ -148,6 +148,7 @@ tmp_text = []
 lurking = {}
 
 settings = livejson.File('setting.json', True, False, 4)
+plate = livejson.File('template.json', True, False, 4)
 
 bool_dict = {
     True: ['Yes', 'Active', 'Success', 'Open', 'On'],
@@ -303,6 +304,8 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     elif cmd == 'restart':
         line.sendMessage(to, 'Bot will restarting')
         restartProgram()
+    elif Pbot == "help":
+        line.sendFlex(to, plate["help"])
     elif cmd == 'speed':
         start = time.time()
         line.sendMessage(to, 'Checking speed')

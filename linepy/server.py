@@ -42,12 +42,6 @@ class Server(Config):
         headerList.update(newSource)
         return headerList
 
-    def setJungelpangHeadersWithDict(self, headersDict):
-        self.JungelpangHeaders.update(headersDict)
-
-    def setJungelpangHeaders(self, argument, value):
-        self.JungelpangHeaders[argument] = value
-        
     def optionsContent(self, url, data=None, headers=None):
         if headers is None:
             headers=self.Headers

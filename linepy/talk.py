@@ -9,7 +9,7 @@ def loggedIn(func):
         if args[0].isLogin:
             return func(*args, **kwargs)
         else:
-            args[0].callback.other('You want to call the function, you must login to LINE')
+            args[0].callback.default('You want to call the function, you must login to LINE')
     return checkLogin
 
 class Talk(object):
@@ -19,6 +19,7 @@ class Talk(object):
 
     def __init__(self):
         self.isLogin = True
+
     """User"""
 
     @loggedIn
@@ -69,41 +70,6 @@ class Talk(object):
     @loggedIn
     def renameContact(self, mid, name):
         return self.updateContactSetting(mid, 2, name)
-    @loggedIn
-    def getRecentMessagesV2(self, messageBoxId, messagesCount):
-        """
-        Parameters:
-         - messageBoxId
-         - messagesCount
-        """
-        self.send_getRecentMessagesV2(messageBoxId, messagesCount)
-        return self.recv_getRecentMessagesV2()
-    @loggedIn
-    def send_getRecentMessagesV2(self, messageBoxId, messagesCount):
-        self._oprot.writeMessageBegin('getRecentMessagesV2', TMessageType.CALL, self._seqid)
-        args = getRecentMessagesV2_args()
-        args.messageBoxId = messageBoxId
-        args.messagesCount = messagesCount
-        args.write(self._oprot)
-        self._oprot.writeMessageEnd()
-        self._oprot.trans.flush()
-    @loggedIn
-    def recv_getRecentMessagesV2(self):
-        iprot = self._iprot
-        (fname, mtype, rseqid) = iprot.readMessageBegin()
-        if mtype == TMessageType.EXCEPTION:
-            x = TApplicationException()
-            x.read(iprot)
-            iprot.readMessageEnd()
-            raise x
-        result = getRecentMessagesV2_result()
-        result.read(iprot)
-        iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
-        if result.e is not None:
-            raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getRecentMessagesV2 failed: unknown result")
 
     @loggedIn
     def addToFavoriteContactMids(self, mid):
@@ -122,9 +88,11 @@ class Talk(object):
     @loggedIn
     def fetchOperation(self, revision, count=1):
         return self.poll.fetchOperations(revision, count)
+
     @loggedIn
     def getLastOpRevision(self):
         return self.poll.getLastOpRevision()
+
     """Message"""
 
     @loggedIn
@@ -337,7 +305,7 @@ class Talk(object):
             'STKID': stickerId
         }
         return self.sendMessage(to, '', contentMetadata, 7)
-
+        
     @loggedIn
     def sendContact(self, to, mid):
         contentMetadata = {'mid': mid}
@@ -381,7 +349,7 @@ class Talk(object):
     @loggedIn
     def removeMessage(self, messageId):
         return self.talk.removeMessage(messageId)
-
+    
     @loggedIn
     def removeAllMessages(self, lastMessageId):
         return self.talk.removeAllMessages(0, lastMessageId)
@@ -393,7 +361,7 @@ class Talk(object):
     @loggedIn
     def destroyMessage(self, chatId, messageId):
         return self.talk.destroyMessage(0, chatId, messageId, sessionId)
-
+    
     @loggedIn
     def sendChatChecked(self, consumer, messageId):
         return self.talk.sendChatChecked(0, consumer, messageId)
@@ -465,7 +433,7 @@ class Talk(object):
         return self.sendFile(to, path, fileName)
 
     """Contact"""
-
+        
     @loggedIn
     def blockContact(self, mid):
         return self.talk.blockContact(0, mid)
@@ -537,7 +505,7 @@ class Talk(object):
     @loggedIn
     def reissueUserTicket(self, expirationTime=100, maxUseCount=100):
         return self.talk.reissueUserTicket(expirationTime, maxUseCount)
-
+    
     @loggedIn
     def cloneContactProfile(self, mid, channel):
         contact = self.getContact(mid)
@@ -572,7 +540,7 @@ class Talk(object):
     @loggedIn
     def getGroupWithoutMembers(self, groupId):
         return self.talk.getGroupWithoutMembers(groupId)
-
+    
     @loggedIn
     def findGroupByTicket(self, ticketId):
         return self.talk.findGroupByTicket(ticketId)
@@ -677,17 +645,17 @@ class Talk(object):
         return self.talk.leaveRoom(0, roomId)
 
     """Call"""
-
+        
     @loggedIn
     def acquireCallTalkRoute(self, to):
         return self.talk.acquireCallRoute(to)
-
+    
     """Report"""
 
     @loggedIn
     def reportSpam(self, chatMid, memberMids=[], spammerReasons=[], senderMids=[], spamMessageIds=[], spamMessages=[]):
         return self.talk.reportSpam(chatMid, memberMids, spammerReasons, senderMids, spamMessageIds, spamMessages)
-
+        
     @loggedIn
     def reportSpammer(self, spammerMid, spammerReasons=[], spamMessageIds=[]):
         return self.talk.reportSpammer(spammerMid, spammerReasons, spamMessageIds)
