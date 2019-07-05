@@ -654,7 +654,7 @@
                                 ]
                             },
                             {
-
+                                
                                 "type": "box",
                                 "layout": "horizontal",
                                 "margin": "xxl",
@@ -817,7 +817,7 @@
                         "type": "text",
                         "text": "☆• WE ARE PRANKBOT TEAM •☆",
                         "color": "#00ffff"
-
+                        
                     }
                 ]
             },
@@ -929,7 +929,7 @@
                         "type": "text",
                         "text": "_______ TEAM PRANKBOTS ______",
                         "color": "#F7141F"
-
+                        
                     }
                 ]
             }
@@ -962,7 +962,7 @@
                         "type": "text",
                         "text": "KODE WARNA HTML PART 1",
                         "color": "#00ffff"
-
+                        
                     }
                 ]
             },
@@ -1366,7 +1366,7 @@
                         "type": "text",
                         "text": "KODE WARNA HTML PART 2",
                         "color": "#00ffff"
-
+                        
                     }
                 ]
             },
@@ -1739,7 +1739,7 @@
                         "type": "text",
                         "text": "☆ • WE ARE PRANKBOT TEAM • ☆",
                         "color": "#F7141F"
-
+                        
                     }
                 ]
             },

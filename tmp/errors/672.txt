@@ -1,0 +1,6 @@
+  File "helloworld.py", line 2584, in executeOp
+    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
+  File "helloworld.py", line 695, in executeCmd
+    res += '\n├ Status : ' + bool_dict[settings['unsendMessage']['status']][1]
+  File "/usr/local/lib/python3.6/dist-packages/livejson.py", line 49, in __getitem__
+    out = self.data[key]

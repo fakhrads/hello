@@ -7,7 +7,9 @@ from humanfriendly import format_timespan, format_size, format_number, format_le
 from threading import Thread
 from urllib.parse import urlencode, quote
 from pathlib import Path
-import time, random, sys, json, codecs, re, os, shutil, requests, ast, pytz, atexit, traceback, base64, pafy, livejson, timeago, math, argparse
+import bs4, time, random, sys, json, codecs, re, os, shutil, requests, ast, pytz, atexit, traceback, base64, pafy, livejson, timeago, math, argparse
+
+mozhdr,z={"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"},{"User-Agent":"Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36"}
 
 try:
     if __modified__ != 'Zero Cool':

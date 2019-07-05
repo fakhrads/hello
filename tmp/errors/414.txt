@@ -1,0 +1,12 @@
+  File "helloworld.py", line 2530, in executeOp
+    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
+  File "helloworld.py", line 310, in executeCmd
+    line.sendFlex(to, plate["help"])
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 7, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 23, in sendFlex
+    token = self.issueLiffView(to)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 7, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 17, in issueLiffView
+    az = LiffChatContext(to)

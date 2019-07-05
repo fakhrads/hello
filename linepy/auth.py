@@ -28,7 +28,7 @@ class Auth(object):
         self.channel    = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_CHAN_QUERY_PATH, self.customThrift).Channel()
         self.square     = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_SQUARE_QUERY_PATH, self.customThrift).Square()
         self.shop       = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_SHOP_QUERY_PATH, self.customThrift).Shop()
-        
+        self.liff       = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_LIFF_QUERY_PATH, self.customThrift).Liff()
         self.revision = self.poll.getLastOpRevision()
         self.isLogin = True
 
@@ -66,14 +66,14 @@ class Auth(object):
             self.provider = IdentityProvider.LINE       # LINE
         else:
             self.provider = IdentityProvider.NAVER_KR   # NAVER
-        
+
         if self.appName is None:
             self.appName=self.server.APP_NAME
         self.server.setHeaders('X-Line-Application', self.appName)
         self.tauth = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_AUTH_QUERY_PATH).Talk(isopen=False)
 
         rsaKey = self.tauth.getRSAKeyInfo(self.provider)
-        
+
         message = (chr(len(rsaKey.sessionKey)) + rsaKey.sessionKey +
                    chr(len(_id)) + _id +
                    chr(len(passwd)) + passwd).encode('utf-8')
@@ -103,7 +103,7 @@ class Auth(object):
         })
 
         result = self.auth.loginZ(lReq)
-        
+
         if result.type == LoginResultType.REQUIRE_DEVICE_CONFIRM:
             self.callback.PinVerified(result.pinCode)
 
@@ -121,7 +121,7 @@ class Auth(object):
                 result = self.auth.loginZ(lReq)
             except:
                 raise Exception('Login failed')
-            
+
             if result.type == LoginResultType.SUCCESS:
                 if result.certificate is not None:
                     with open(_id + '.crt', 'w') as f:
@@ -156,9 +156,9 @@ class Auth(object):
         self.server.setHeaders('X-Line-Access', qrCode.verifier)
 
         getAccessKey = self.server.getJson(self.server.parseUrl(self.server.LINE_CERTIFICATE_PATH), allowHeader=True)
-        
+
         self.auth = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_LOGIN_QUERY_PATH).Auth(isopen=False)
-        
+
         try:
             lReq = self.__loginRequest('1', {
                 'keepLoggedIn': self.keepLoggedIn,

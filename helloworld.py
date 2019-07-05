@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-'''
-Free to use, all credits belong to me, Zero Cool.
-Do not sell or rent it!
-© 2018 ZeroDAYS
-'''
 from important import *
 
 # Setup Argparse
@@ -144,11 +139,18 @@ myMid = line.profile.mid
 assistsMid = line2.profile.mid
 programStart = time.time()
 oepoll = OEPoll(line)
+
+
+
 tmp_text = []
 lurking = {}
+msg_dict = {}
+msg_dict1 = {}
 
 settings = livejson.File('setting.json', True, False, 4)
-plate = livejson.File('template.json', True, False, 4)
+
+plates = codecs.open("template.json","r","utf-8")
+plate = json.load(plates)
 
 bool_dict = {
     True: ['Yes', 'Active', 'Success', 'Open', 'On'],
@@ -162,6 +164,17 @@ settings['myProfile']['statusMessage'] = profile.statusMessage
 settings['myProfile']['pictureStatus'] = profile.pictureStatus
 coverId = line.profileDetail['result']['objectId']
 settings['myProfile']['coverId'] = coverId
+def atend():
+    print("Saving")
+    with open("Log_data.json","w",encoding='utf8') as f:
+        json.dump(msg_dict, f, ensure_ascii=False, indent=4,separators=(',', ': '))
+
+    print("BYE")
+def cTime_to_datetime(unixtime):
+    return datetime.fromtimestamp(int(str(unixtime)[:len(str(unixtime))-3]))
+
+def dt_to_str(dt):
+    return dt.strftime('%H:%M:%S')
 
 def restartProgram():
     print ('##----- PROGRAM RESTARTED -----##')
@@ -198,6 +211,10 @@ def genImageB64(path):
 
 def genUrlB64(url):
     return base64.b64encode(url.encode('utf-8')).decode('utf-8')
+
+def bs(link,hdr=True):
+	if hdr == False:return bs4.BeautifulSoup(requests.get(link).content, "html5lib")
+	else:return bs4.BeautifulSoup(requests.get(link,headers=z).content, "html5lib")
 
 def removeCmd(text, key=''):
     if key == '':
@@ -245,13 +262,13 @@ def parsingRes(res):
 
 def mentionMembers(to, mids=[]):
     if myMid in mids: mids.remove(myMid)
-    parsed_len = len(mids)//20+1
+    parsed_len = len(mids)//10+1
     result = '╭───「 Mention Members 」\n'
     mention = '@fakhrads\n'
     no = 0
     for point in range(parsed_len):
         mentionees = []
-        for mid in mids[point*20:(point+1)*20]:
+        for mid in mids[point*10:(point+1)*10]:
             no += 1
             result += '│ %i. %s' % (no, mention)
             slen = len(result) - 12
@@ -294,6 +311,12 @@ def restoreProfile():
     coverId = settings['myProfile']['coverId']
     line.updateProfileCoverById(coverId)
 
+def atend():
+    print("Saving")
+    with open("Log_data.json","w",encoding='utf8') as f:
+        json.dump(msg_dict, f, ensure_ascii=False, indent=4,separators=(',', ': '))
+    print("BYE")
+
 def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     if cmd == 'logoutbot':
         line.sendMessage(to, 'Bot will logged out')
@@ -304,7 +327,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     elif cmd == 'restart':
         line.sendMessage(to, 'Bot will restarting')
         restartProgram()
-    elif Pbot == "help":
+    elif cmd == "xx":
         line.sendFlex(to, plate["help"])
     elif cmd == 'speed':
         start = time.time()
@@ -644,22 +667,22 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             textsl = textt.lower()
             res = '╭───「 Help Group」'
             res += '\n├ Usage : '
-            res += '│ • {key}GroupInfo'
-            res += '│ • {key}GroupList'
-            res += '│ • {key}InvitationList'
-            res += '│ • {key}MemberList'
-            res += '│ • {key}PendingList'
-            res += '│ • {key}OpenQr'
-            res += '│ • {key}CloseQr'
-            res += '│ • {key}ChangeGroupName <name>'
-            res += '│ • {key}ChangeGroupPict'
-            res += '│ • {key}Kickall'
-            res += '│ • {key}Cancelall'
-            res += '│ • {key}MentionAll'
-            res += '│ • {key}Lurk'
-            res += '│ • {key}Kick <mention>'
-            res += '│ • {key}Vkick <mention>'
-            res += '│ • {key}Greet'
+            res += '\n│ • {key}GroupInfo'
+            res += '\n│ • {key}GroupList'
+            res += '\n│ • {key}InvitationList'
+            res += '\n│ • {key}MemberList'
+            res += '\n│ • {key}PendingList'
+            res += '\n│ • {key}OpenQr'
+            res += '\n│ • {key}CloseQr'
+            res += '\n│ • {key}ChangeGroupName <name>'
+            res += '\n│ • {key}ChangeGroupPict'
+            res += '\n│ • {key}Kickall'
+            res += '\n│ • {key}Cancelall'
+            res += '\n│ • {key}MentionAll'
+            res += '\n│ • {key}Lurk'
+            res += '\n│ • {key}Kick <mention>'
+            res += '\n│ • {key}Vkick <mention>'
+            res += '\n│ • {key}Greet'
             res += '\n╰───「 ZeroDAYS 」'
             line.sendMessage(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'settings':
@@ -678,6 +701,29 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             res += '│ • {key}CheckSticker <on/off>'
             res += '\n╰───「 ZeroDAYS 」'
             line.sendMessage(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
+    elif cmd.startswith('unsendmsg'):
+        textt = removeCmd(text, setKey)
+        texttl = textt.lower()
+        res = '╭───「 Get Unsended Message 」'
+        res += '\n├ Status : ' + bool_dict[settings['unsendMessage']][1]
+        res += '\n├ Usage : '
+        res += '\n│ • {key}UnsendMSG'
+        res += '\n│ • {key}UnsendMSG <on/off>'
+        res += '\n╰───「 ZeroBOT 」'
+        if cmd == 'unsendmsg':
+            line.sendMessage(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
+        elif texttl == 'on':
+            if settings['unsendMessage']:
+                line.sendMessage(to, 'Get Unsended Message already active')
+            else:
+                settings['unsendMessage'] = True
+                line.sendMessage(to, 'Success activated Get Unsended Message')
+        elif texttl == 'off':
+            if not settings['unsendMessage']:
+                line.sendMessage(to, 'Get Unsended Message already deactive')
+            else:
+                settings['unsendMessage']= False
+                line.sendMessage(to, 'Success deactivated Get Unsended Message')
     elif cmd.startswith('autorespond'):
         textt = removeCmd(text, setKey)
         texttl = textt.lower()
@@ -777,6 +823,23 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             else:
                 settings['checkSticker'] = False
                 line.sendMessage(to, 'Success deactivated checksticker')
+    elif cmd.startswith('copy '):
+       _name = msg.text.replace("copy @","")
+       _nametarget = _name.rstrip('  ')
+       gs = line.getGroup(to)
+       targets = []
+       for g in gs.members:
+           if _nametarget == g.displayName:
+               targets.append(g.mid)
+       if targets == []:
+           line.sendMessage(to, "Not Found...")
+       else:
+           for target in targets:
+                try:
+                   line.CloneContactProfile(target)
+                   line.sendMessage(to, "sᴜᴄᴄᴇs ᴄᴏᴘʏ ᴘʀᴏғɪʟᴇ")
+                except Exception as e:
+                    print(e)
     elif cmd.startswith('myprofile'):
         textt = removeCmd(text, setKey)
         texttl = textt.lower()
@@ -2090,6 +2153,11 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                 return line.sendMessage(to, 'Failed cancel all pending members, the reason is `%s`' % talk_error.reason)
             time.sleep(0.8)
         line.sendMessage(to, 'Success cancel all pending members, totals %i pending members' % len(pendings))
+
+    #==============================#
+    #========MEDIA SECTION=========#
+    #==============================#
+
     elif cmd.startswith("praytime"):
         a = 'Peta Lokasi'
         c = 'https://png.pngtree.com/element_pic/16/12/02/51e6452ca365f618ab4b723c7aa18be9.jpg'
@@ -2112,6 +2180,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             ret_ += "\n╰───「 ZeroDAYs x Hello World 」"
             line.sendImageWithURL(to,data['peta_gambar'])
             line.sendMessage(to, str(ret_))
+
     elif cmd.startswith("gambar"):
         try:
             separate = msg.text.split(" ")
@@ -2161,7 +2230,42 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             else:
                 line.sendMessage(to,'Failed to get data')
         except Exception as error:
-            fakhri.sendMessage(to, str(error))
+            line.sendMessage(to, str(error))
+    elif cmd == "samehadaku":
+        textt = removeCmd(text, setKey)
+        texttl = textt.lower()
+        list,no="[ Samehadaku Update ]\n\n",1
+        for anime in data.findAll("li",class_="post-item tie-standard"):
+            link=anime.a.get("href")
+            title=anime.a.get("title").split("Subtitle")[0]
+            list+="{}. {}\n".format(no,title)
+            no+=1
+            animes.append({"title":title,"link":link})
+        list+="\n[ Finish ]\nUntuk melihat link download anime, silahkan klik : \n{key}samehadaku download <number> "
+        line.sendMessage(to, parsingRes(list).format_map(SafeDict(key=setKey.title())))
+    elif cmd.startswith('download '):
+        print("testing")
+        sep = text.split(" ")
+        search = text.replace(sep[0] + " ","")
+        data,no,animes=bs("https://samehadaku.tv"),1,[]
+        list,no="[ Samehadaku Update ]\n\n",1
+        for anime in data.findAll("li",class_="post-item tie-standard"):
+            link=anime.a.get("href")
+            title=anime.a.get("title").split("Subtitle")[0]
+            list+="{}. {}\n".format(no,title)
+            no+=1
+            animes.append({"title":title,"link":link})
+            a = search
+            z = bs(animes[a-1]["link"]).find("div",class_="download-eps").findAll("li")
+            links=[]
+            for linkk in z:
+                links.append({linkk.strong.text:[{"link":linkx.get("href"),"via":linkx.text} for linkx in linkk.findAll("a")][:5]})
+                if len(links) >= 4:
+                    del links[0];del links[1]
+                elif len(links[0]) >= 5:
+                    links[0] = links[0][:5]
+                print(json.dumps(links,indent=4))
+                line.sendMessage(to,json.dumps(links,indent=4))
     elif cmd.startswith("ig"):
         try:
             sep = text.split(" ")
@@ -2488,6 +2592,7 @@ def executeOp(op):
                       line.log('ERROR!')
                 else:
                     pass
+
         if op.type == 25:
             msg      = op.message
             text     = str(msg.text)
@@ -2602,7 +2707,9 @@ def executeOp(op):
             txt      = text.lower()
             if settings['autoRead']:
                 line.sendChatChecked(to, msg_id)
+
             if msg.contentType == 0: # Content type is text
+                msg_dict[msg.id] = {"text":msg.text,"from":msg._from,"createdTime":msg.createdTime}
                 if '/ti/g/' in text and settings['autoJoin']['ticket']:
                     regex = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
                     links = regex.findall(text)
@@ -2651,6 +2758,13 @@ def executeOp(op):
                                 line.sendMessage(to, settings['autoRespond']['message'])
                             else:
                                 line.sendMentionV2(to, settings['autoRespond']['message'], [sender])
+            if msg.contentType == 1:
+                    path = line.downloadObjectMsg(msg_id)
+                    msg_dict[msg.id] = {"text":'Gambarnya dibawah',"data":path,"from":msg._from,"createdTime":msg.createdTime}
+
+            if msg.contentType == 7:
+                    msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}
+
         if op.type == 55:
             if op.param1 in lurking:
                 if lurking[op.param1]['status'] and op.param2 not in lurking[op.param1]['members']:
@@ -2660,6 +2774,70 @@ def executeOp(op):
                             line.sendMessage(op.param1, lurking[op.param1]['reply']['message'])
                         else:
                             line.sendMentionV2(op.param1, lurking[op.param1]['reply']['message'], [op.param2])
+
+        if op.type == 65:
+            if settings["unsendMessage"] == True:
+                print("++ Someone has unsended a message")
+                try:
+                    at = op.param1
+                    msg_id = op.param2
+                    if msg_id in msg_dict:
+                        if msg_dict[msg_id]["from"]:
+                           if msg_dict[msg_id]["text"] == 'Gambarnya dibawah':
+                                ginfo = line.getGroup(at)
+                                target = line.getContact(msg_dict[msg_id]["from"])
+                                zx = ""
+                                zxc = ""
+                                zx2 = []
+                                xpesan =  "╭───「 Gambar di Hapus 」\n├ Pengirim : "
+                                ret_ = "├ Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n├ Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
+                                ret_ += '\n╰───「 ZeroDAYS 」'
+                                ry = str(target.displayName)
+                                pesan = ''
+                                pesan2 = pesan+"@x \n"
+                                xlen = str(len(zxc)+len(xpesan))
+                                xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
+                                zx = {'S':xlen, 'E':xlen2, 'M':target.mid}
+                                zx2.append(zx)
+                                zxc += pesan2
+                                text = xpesan + zxc + ret_ + ""
+                                line.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                line.sendImage(at, msg_dict[msg_id]["data"])
+                           else:
+                                ginfo = line.getGroup(at)
+                                target = line.getContact(msg_dict[msg_id]["from"])
+                                ret_ =  "「 Pesan Dihapus 」\n"
+                                ret_ += "• Pengirim : {}".format(str(target.displayName))
+                                ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
+                                ret_ += "\n• Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
+                                line.sendMessage(at, str(ret_))
+                        del msg_dict[msg_id]
+                except Exception as e:
+                    print(e)
+
+        if op.type == 65:
+            if settings["unsendMessage"] == True:
+                print("++ Someone has unsended a sticker message")
+                try:
+                    at = op.param1
+                    msg_id = op.param2
+                    if msg_id in msg_dict1:
+                        if msg_dict1[msg_id]["from"]:
+                                ginfo = line.getGroup(at)
+                                target = line.getContact(msg_dict1[msg_id]["from"])
+                                ret_ =  "「 Sticker Dihapus 」\n"
+                                ret_ += "• Pengirim : {}".format(str(target.displayName))
+                                ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
+                                ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
+                                line.sendMessage(at, str(ret_))
+                                line.sendImage(at, msg_dict1[msg_id]["data"])
+                        del msg_dict1[msg_id]
+                except Exception as e:
+                    print(e)
+
     except TalkException as talk_error:
         logError(talk_error)
         if talk_error.code in [7, 8, 20]:

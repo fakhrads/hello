@@ -1,14 +1,2 @@
-  File "helloworld.py", line 1979, in executeOp
-    line.sendMentionV2(op.param1, settings['greet']['join']['message'].format(name=line.getCompactGroup(op.param1).name), [op.param2])
-  File "/root/a/linepy/talk.py", line 10, in checkLogin
-    return func(*args, **kwargs)
-  File "/root/a/linepy/talk.py", line 261, in sendMentionV2
-    self.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
-  File "/root/a/linepy/talk.py", line 10, in checkLogin
-    return func(*args, **kwargs)
-  File "/root/a/linepy/talk.py", line 107, in sendMessage
-    return self.talk.sendMessage(self._messageReq[to], msg)
-  File "/usr/local/lib/python3.6/dist-packages/akad/TalkService.py", line 8145, in sendMessage
-    return self.recv_sendMessage()
-  File "/usr/local/lib/python3.6/dist-packages/akad/TalkService.py", line 8170, in recv_sendMessage
-    raise result.e
+  File "helloworld.py", line 2729, in executeOp
+    msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}

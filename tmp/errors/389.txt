@@ -1,0 +1,12 @@
+  File "helloworld.py", line 2528, in executeOp
+    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
+  File "helloworld.py", line 308, in executeCmd
+    line.sendFlex(to, plate["help"])
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 7, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 23, in sendFlex
+    token = self.issueLiffView(to)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 7, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/liff.py", line 19, in issueLiffView
+    lf = LiffViewRequest('1573372092-8QmExGyJ', ax)

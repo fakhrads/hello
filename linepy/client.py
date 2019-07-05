@@ -8,8 +8,9 @@ from .call import Call
 from .timeline import Timeline
 from .server import Server
 from .shop import Shop
+from .liff import Liff
 
-class LINE(Auth, Models, Talk, Square, Call, Timeline, Shop):
+class LINE(Auth, Models, Talk, Square, Call, Timeline, Shop, Liff):
 
     def __init__(self, idOrAuthToken=None, passwd=None, **kwargs):
         """
@@ -36,6 +37,7 @@ class LINE(Auth, Models, Talk, Square, Call, Timeline, Shop):
         self.keepLoggedIn = kwargs.pop('keepLoggedIn', True)
         self.customThrift = kwargs.pop('customThrift', False)
         self.ignoreSquare = kwargs.pop('ignoreSquare', True)
+
         Auth.__init__(self)
         if not (idOrAuthToken or idOrAuthToken and passwd):
             self.loginWithQrCode()
@@ -57,3 +59,4 @@ class LINE(Auth, Models, Talk, Square, Call, Timeline, Shop):
         Call.__init__(self)
         Timeline.__init__(self)
         Shop.__init__(self)
+        Liff.__init__(self)

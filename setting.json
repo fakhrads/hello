@@ -25,6 +25,7 @@
     "checkContact": false,
     "checkPost": false,
     "checkSticker": false,
+    "unsendMessage": true,
     "defaultReplyReader": "Hello @!, come here join to chat",
     "greet": {
         "join": {
@@ -37,10 +38,10 @@
         }
     },
     "myProfile": {
-        "coverId": "2bb21eee670891bd33f5b72832d9e17b",
+        "coverId": "17e8ad3c5fff9f8aa7f4f76d14d29f43",
         "displayName": "Fakhri",
-        "pictureStatus": "0h-O5Z6jlAcmAII1_312cNNzRmfA1_DXQocBZqUSkhLVInQTA0ZhY6AS8iLwVxEWA-YUA_VXkqL1Ek",
-        "statusMessage": "Zero DAYs"
+        "pictureStatus": "0h-O5ZNsjocmAII1jsJLYNNzRmfA1_DXQocBZqUSkhLVInQTA0ZhY6AS8iLwVxEWA-YUA_VXkqL1Ek",
+        "statusMessage": "fakhrads.id"
     },
     "protect": {
         "qr": false,

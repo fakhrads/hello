@@ -9,7 +9,7 @@ def loggedIn(func):
         else:
             args[0].callback.default('You want to call the function, you must login to LINE')
     return checkLogin
-    
+
 class Object(object):
 
     def __init__(self):
@@ -40,7 +40,21 @@ class Object(object):
         if r.status_code != 201:
             raise Exception('Update profile picture failure.')
         return True
-        
+
+    @loggedIn
+    def changeVideoAndPictureProfile(pict, vids):
+        try:
+            files = {'file': open(vids, 'rb')}
+            obs_params = self.genOBSParams({'oid': clientMid, 'ver': '2.0', 'type': 'video', 'cat': 'vp.mp4', 'name': 'Hello_World.mp4'})
+            data = {'params': obs_params}
+            r_vp = self.server.postContent('{}/talk/vp/upload.nhn'.format(str(client.server.LINE_OBS_DOMAIN)), data=data, files=files)
+            if r_vp.status_code != 201:
+                return "Failed update profile"
+            self.updateProfilePicture(pict, 'vp')
+            return "Success update profile"
+        except Exception as e:
+            raise Exception("Error change video and picture profile %s"%str(e))
+
     @loggedIn
     def updateProfileVideoPicture(self, path):
         try:

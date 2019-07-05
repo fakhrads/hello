@@ -1,0 +1,16 @@
+  File "helloworld.py", line 2535, in executeOp
+    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
+  File "helloworld.py", line 2120, in executeCmd
+    line.sendImageWithURL(to,data['peta_gambar'])
+  File "/mnt/d/Projects/Python/hello/linepy/talk.py", line 10, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/talk.py", line 391, in sendImageWithURL
+    return self.sendImage(to, path)
+  File "/mnt/d/Projects/Python/hello/linepy/talk.py", line 10, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/talk.py", line 386, in sendImage
+    return self.uploadObjTalk(path=path, type='image', returnAs='bool', objId=objectId)
+  File "/mnt/d/Projects/Python/hello/linepy/object.py", line 8, in checkLogin
+    return func(*args, **kwargs)
+  File "/mnt/d/Projects/Python/hello/linepy/object.py", line 172, in uploadObjTalk
+    raise Exception('Upload %s failure.' % type)

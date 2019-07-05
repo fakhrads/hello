@@ -1,12 +1,6 @@
-  File "helloworld.py", line 2477, in executeOp
+  File "helloworld.py", line 2620, in executeOp
     executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 1944, in executeCmd
-    M = line.getRecentMessagesV2(to, 1001)
-  File "/root/a/linepy/talk.py", line 10, in checkLogin
-    return func(*args, **kwargs)
-  File "/root/a/linepy/talk.py", line 98, in getRecentMessagesV2
-    self.send_getRecentMessagesV2(messageBoxId, messagesCount)
-  File "/root/a/linepy/talk.py", line 10, in checkLogin
-    return func(*args, **kwargs)
-  File "/root/a/linepy/talk.py", line 105, in send_getRecentMessagesV2
-    self._oprot.writeMessageBegin('getRecentMessagesV2', TMessageType.CALL, self._seqid)
+  File "helloworld.py", line 2234, in executeCmd
+    data,no,animes=bs("https://samehadaku.tv"),1,[]
+  File "helloworld.py", line 214, in bs
+    else:return bs4.BeautifulSoup(requests.get(link,headers=z).content, "html5lib")

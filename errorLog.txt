@@ -172,3 +172,87 @@
 410 : TalkException(code=10, reason='not a member', parameterMap={})
 791 : TalkException(code=0, reason='invalid groupId', parameterMap=None)
 257 : 'changeCoverProfile'
+402 : name 'Pbot' is not defined
+319 : name 'Pbot' is not defined
+139 : name 'Pbot' is not defined
+790 : name 'Pbot' is not defined
+850 : 'LINE' object has no attribute 'sendFlex'
+144 : name 'LiffChatContext' is not defined
+728 : name 'LiffChatContext' is not defined
+481 : 'changeCoverProfile'
+898 : name 'LiffChatContext' is not defined
+188 : name 'LiffChatContext' is not defined
+208 : name 'LiffChatContext' is not defined
+583 : name 'LiffChatContext' is not defined
+666 : Object of type '_NestedDict' is not JSON serializable
+253 : Object of type '_NestedDict' is not JSON serializable
+382 : name 'LiffViewRequest' is not defined
+389 : name 'LiffViewRequest' is not defined
+947 : object() takes no parameters
+709 : name 'issueLiffView_args' is not defined
+354 : Object of type '_NestedDict' is not JSON serializable
+499 : Object of type '_NestedDict' is not JSON serializable
+436 : Object of type '_NestedDict' is not JSON serializable
+261 : TalkException(code=0, reason='invalid mention.', parameterMap=None)
+615 : 'LINE' object has no attribute 'getRecentMessages'
+414 : name 'LiffChatContext' is not defined
+835 : 'LINE' object has no attribute 'getRecentMessages'
+653 : 'changeCoverProfile'
+146 : Upload image failure.
+751 : 'changeCoverProfile'
+672 : 'unsendMessage'
+213 : 'bool' object is not subscriptable
+424 : 'bool' object is not subscriptable
+105 : Expecting property name enclosed in double quotes: line 87 column 5 (char 3045)
+238 : 'bool' object is not subscriptable
+598 : 'changeCoverProfile'
+837 : local variable 'to' referenced before assignment
+474 : local variable 'to' referenced before assignment
+176 : local variable 'ret_' referenced before assignment
+814 : local variable 'ret_' referenced before assignment
+953 : 'changeCoverProfile'
+884 : 'changeCoverProfile'
+193 : local variable 'ret_' referenced before assignment
+472 : local variable 'ret_' referenced before assignment
+424 : local variable 'ret_' referenced before assignment
+768 : local variable 'ret_' referenced before assignment
+553 : local variable 'ret_' referenced before assignment
+568 : local variable 'ret_' referenced before assignment
+213 : local variable 'ret_' referenced before assignment
+279 : local variable 'ret_' referenced before assignment
+527 : local variable 'ret_' referenced before assignment
+790 : local variable 'ret_' referenced before assignment
+743 : local variable 'ret_' referenced before assignment
+410 : local variable 'ret_' referenced before assignment
+103 : local variable 'ret_' referenced before assignment
+867 : local variable 'ret_' referenced before assignment
+235 : local variable 'ret_' referenced before assignment
+479 : local variable 'ret_' referenced before assignment
+999 : local variable 'ret_' referenced before assignment
+876 : local variable 'ret_' referenced before assignment
+299 : local variable 'ret_' referenced before assignment
+342 : local variable 'ret_' referenced before assignment
+700 : local variable 'ret_' referenced before assignment
+547 : local variable 'ret_' referenced before assignment
+344 : local variable 'ret_' referenced before assignment
+636 : local variable 'ret_' referenced before assignment
+684 : local variable 'ret_' referenced before assignment
+603 : local variable 'ret_' referenced before assignment
+292 : local variable 'ret_' referenced before assignment
+481 : local variable 'ret_' referenced before assignment
+424 : local variable 'ret_' referenced before assignment
+991 : local variable 'ret_' referenced before assignment
+267 : local variable 'ret_' referenced before assignment
+422 : local variable 'ret_' referenced before assignment
+170 : local variable 'ret_' referenced before assignment
+451 : local variable 'ret_' referenced before assignment
+150 : local variable 'ret_' referenced before assignment
+689 : name 'h' is not defined
+605 : name 'bs4' is not defined
+863 : name 'h' is not defined
+200 : local variable 'data' referenced before assignment
+178 : local variable 'textt' referenced before assignment
+738 : '<=' not supported between instances of 'str' and 'int'
+969 : '<=' not supported between instances of 'str' and 'int'
+103 : '<=' not supported between instances of 'str' and 'int'
+799 : unsupported operand type(s) for -: 'str' and 'int'

@@ -1,4 +1,2 @@
-  File "helloworld.py", line 2034, in executeOp
-    elif settings['changeCoverProfile']:
-  File "/usr/local/lib/python3.6/dist-packages/livejson.py", line 49, in __getitem__
-    out = self.data[key]
+  File "helloworld.py", line 2729, in executeOp
+    msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}
