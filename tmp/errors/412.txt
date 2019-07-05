@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2311, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 663, in executeCmd
-    G = caca.getGroup(msg.to)

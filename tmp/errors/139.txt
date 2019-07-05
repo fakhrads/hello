@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2528, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 307, in executeCmd
-    elif Pbot == "help":

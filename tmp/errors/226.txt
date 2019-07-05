@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2381, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 937, in executeCmd
-    else: ret_ += "\n├[ OFF ] Proteksi"

@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2197, in executeOp
-    elif settings['changeCoverProfile']:
-  File "/usr/local/lib/python3.6/dist-packages/livejson.py", line 49, in __getitem__
-    out = self.data[key]

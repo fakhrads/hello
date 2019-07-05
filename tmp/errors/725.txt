@@ -1,2 +1,0 @@
-  File "helloworld.py", line 2230, in executeOp
-    elif assistsMid in op.param3:

@@ -1,6 +1,0 @@
-  File "helloworld.py", line 2620, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 2234, in executeCmd
-    data,no,animes=bs("https://samehadaku.tv"),1,[]
-  File "helloworld.py", line 214, in bs
-    else:return bs4.BeautifulSoup(requests.get(link,headers=z).content, "html5lib")

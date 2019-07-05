@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2620, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 2247, in executeCmd
-    z=h.bs(animes[a-1]["link"]).find("div",class_="download-eps").findAll("li")

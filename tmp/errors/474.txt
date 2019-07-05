@@ -1,2 +1,0 @@
-  File "helloworld.py", line 2583, in executeOp
-    line.sendImageWithURL(to,path)

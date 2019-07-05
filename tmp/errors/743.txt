@@ -1,2 +1,0 @@
-  File "helloworld.py", line 2729, in executeOp
-    msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}

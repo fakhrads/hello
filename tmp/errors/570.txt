@@ -1,6 +1,0 @@
-  File "helloworld.py", line 2496, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 1078, in executeCmd
-    line.postJungelpang(to, data)
-  File "/root/a/linepy/jungelpang.py", line 15, in checkLogin
-    args[0].callback.other('Your LINE account is not support Jungelpang')

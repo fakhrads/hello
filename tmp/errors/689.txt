@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2616, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 2230, in executeCmd
-    data,no,animes=h.bs("https://samehadaku.tv"),1,[]

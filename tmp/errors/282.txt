@@ -1,4 +1,0 @@
-  File "helloworld.py", line 2477, in executeOp
-    executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
-  File "helloworld.py", line 1944, in executeCmd
-    M = line.getRecentMessages(to, 1001)

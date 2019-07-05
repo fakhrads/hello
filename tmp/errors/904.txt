@@ -1,2 +1,0 @@
-  File "helloworld.py", line 2204, in executeOp
-    if op.param2 not in bots and settings["protectInvite"] == True:
