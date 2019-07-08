@@ -182,7 +182,7 @@ def restartProgram():
     os.execl(python, python, *sys.argv)
 
 def logError(error, write=True):
-    errid = str(random.randint(0, 999))
+    errid = str(random.randint(100, 999))
     filee = open('tmp/errors/%s.txt'%errid, 'w') if write else None
     if args.traceback: traceback.print_tb(error.__traceback__)
     if write:
